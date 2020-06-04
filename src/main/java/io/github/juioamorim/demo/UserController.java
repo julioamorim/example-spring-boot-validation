@@ -5,7 +5,6 @@ import java.util.Map;
 
 import javax.validation.Valid;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -19,9 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-	@Autowired
-	UserRepository userRepository;
-
 	// in the context for the validation, the annotation @valid is the most
 	// important annotation
 	// when some argument/field failure, Spring boot throws a
@@ -30,7 +26,6 @@ public class UserController {
 	ResponseEntity<String> addUser(@Valid @RequestBody User user) {
 
 		// persisting user
-		userRepository.save(user);
 		return ResponseEntity.ok("User is valid");
 	}
 
