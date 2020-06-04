@@ -6,14 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
 @Entity
-@Getter
-@Setter
-@ToString
 public class User {
 
 	@Id
@@ -31,7 +24,31 @@ public class User {
 	@NotBlank(message = "Username is required")
 	private String userName;
 
-	@NotBlank(message = "Email is reqeuired")
+	@NotBlank(message = "Email is required")
 	private String userEmail;
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getUserEmail() {
+		return userEmail;
+	}
+
+	public void setUserEmail(String userEmail) {
+		this.userEmail = userEmail;
+	}
 
 }
