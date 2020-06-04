@@ -1,7 +1,9 @@
 # example-spring-boot-validation
 This is a simple project that makes field validation using spring-boot-starter-validation, web,  jpa, h2-database and more!
 
-##To run application manually with maven, execute the command bellow:
+#Run the Project
+
+###To run application manually with maven, execute the command bellow:
 
 ```
 1. mvn clean 
@@ -15,3 +17,6 @@ This is a simple project that makes field validation using spring-boot-starter-v
 Enjoy!!!
 
 ```
+#Or
+
+##You can run the project by importing with the IDE your preference
